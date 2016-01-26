@@ -1,4 +1,4 @@
-import.java.util.Scanner; //For inputs
+import java.util.Scanner; //For inputs
 
 //Main game class
 
@@ -7,7 +7,7 @@ public class GameMain{
   private GameState currentState; //current game state
   private Filler currentPlayer; //current player
 
-  private static Scanner int = new Scanner(System.in); //input Scanner
+  private static Scanner in = new Scanner(System.in); //input Scanner
 
   //Game constructor
   public GameMain() {
@@ -56,8 +56,8 @@ public class GameMain{
         System.out.print("Player O enter your move (row[1-3] column[1-3]) : ");
       }
 
-      int row = int.nextInt() - 1; //take in row input
-      int col = int.nextInt() - 1; //take in col input
+      int row = in.nextInt() - 1; //take in row input
+      int col = in.nextInt() - 1; //take in col input
       if(row >= 0 && row < Board.rows && col >= 0 && col < Board.cols
       && board.cells[row][col].content == Filler.Empty){ //check input valid
         board.cells[row][col].content = theFiller; //set cell
@@ -73,7 +73,7 @@ public class GameMain{
 
   //Update currentState after player has moved
   public void updateGame(Filler theFiller){
-    if(board.hasWon(theSeed)){ //check for win
+    if(board.hasWon(theFiller)){ //check for win
       currentState = (theFiller == Filler.Cross) ? GameState.CrossWon : GameState.NoughtWon;
     }
     else if (board.isDraw()){ //check for draw

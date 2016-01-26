@@ -2,7 +2,7 @@
 
 public class Cell{
   Filler content; //cell with content type : Filler
-  //int row, col;
+  int row, col;
 
   //Cell constructor
   public Cell(int row, int col){

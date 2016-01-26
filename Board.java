@@ -7,7 +7,7 @@ public class Board{
   public static final int cols = 3;
 
   //Package access
-  Cell[][] cells //board of Cells
+  Cell[][] cells; //board of Cells
   int currentRow, currentCol;
 
   //Board constructor
