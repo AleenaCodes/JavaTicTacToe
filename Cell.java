@@ -1,6 +1,6 @@
 //Class modelling each individual cell of game board
 
-public class Cell {
+public class Cell{
   Filler content; //cell with content type : Filler
   //int row, col;
 
